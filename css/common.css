@@ -71,6 +71,9 @@ select.no-line { border: none; }
 .inp-chk input[type=radio]:checked + .ic:before { content: ""; display: block; position: absolute; top: 50%; left: 50%; width: 0.625rem; height: 0.625rem; border-radius: 100%; background: #E32323; transform: translate(-50%, -50%); }
 .inp-chk input:disabled + .ic { opacity: 0.4 !important; }
 .inp-chk .t { display: inline-flex; align-items: center; margin-left: 0.5rem; vertical-align: middle; line-height: 1.2; font-size: 0.75rem; color: #333; }
+.inp-chk .t small { font-size: 0.625rem; line-height: 1; }
+.inp-chk .t.column { flex-direction: column; align-items: flex-start; line-height: 1; }
+.inp-chk .t.column small { line-height: 0.8; }
 .inp-chk input:disabled ~ .t { color: #888888; }
 .inp-chk.coupon .t { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
 
