@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <div class="title-main-wrap">
+      <div class="title">
+        <div class="left">
+          <button type="button" class="btn-prev"></button>
+        </div>
+        <h1 class="title-main">배송지 목록</h1>
+        <div class="right">
+          <div class="pad">
+            <button type="button" class="btn-type4 st3">추가</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- container -->
+    <div class="container">
+      <main class="content">
+        <div class="delivery-address-wrap">
+          <ul class="delivery-list">
+            <li>
+              <div class="addr-unit">
+                <div class="check">
+                  <label class="inp-chk">
+                    <input type="radio" name="addr" ><span class="ic"></span>
+                  </label>
+                </div>
+                <div class="address">
+                  <div class="menu">
+                    <button type="button" class="btn-type4 st5">수정</button>
+                    <button type="button" class="btn-type4 st5">삭제</button>
+                  </div>
+                  <div class="sort">
+                    <b>집</b>
+                    <span class="tag">기본배송지</span>
+                  </div>
+                  <div class="contact">김현민 / 010-2456-0637</div>
+                  <div class="addr">
+                    [16851] 경기도 용인시 수지구 성복2로 110
+                    4층, 기획실
+                  </div>
+                  <div class="etc">
+                    <span class="pos c-red">수지성복점</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="addr-unit">
+                <div class="check">
+                  <label class="inp-chk">
+                    <input type="radio" name="addr" ><span class="ic"></span>
+                  </label>
+                </div>
+                <div class="address">
+                  <div class="menu">
+                    <button type="button" class="btn-type4 st5">수정</button>
+                    <button type="button" class="btn-type4 st5">삭제</button>
+                  </div>
+                  <div class="sort">
+                    <b>회사</b>
+                  </div>
+                  <div class="contact">김현민 / 010-2456-0637</div>
+                  <div class="addr">
+                    [16851] 경기도 용인시 수지구 성복2로 110
+                    4층, 기획실
+                  </div>
+                  <div class="etc">
+                    <span class="pos c-red">배송불가지역</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-fixed">
+          <div class="btn-wrap">
+            <button type="button" class="btn-type1 st1" onclick="popClose('#pop-delivery-add');">배송지 변경</button>
+          </div>
+        </div>
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+  </div>
+  <!-- // wrap -->
+
+</body>
+</html>

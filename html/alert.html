@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+</head>
+
+<body>
+<!-- wrap -->
+<div class="wrap">
+  
+  <!-- container -->
+  <div class="container">
+    <div class="content">
+
+      <button class="btn-type2 st1" onclick="alertOpen('Default.');">Default</button>
+      <br><button class="btn-type2 st2" onclick="alertOpen('확인하시겠습니까?', ['확인'], alertCallback);">확인</button>
+      <br><button class="btn-type2 st3" onclick="alertOpen('확인하시겠습니까?', ['취소', '확인'], alertCallback);">취소, 확인</button>
+      <br><button class="btn-type2 st4" onclick="alertOpen('확인하시겠습니까?', ['취소', '확인'], alertCallback, {close:true});">x버튼 있는 케이스</button>
+      <br><button class="btn-type2 st5" onclick="alertOpen('확인하시겠습니까? <br>확인하시겠습니까?', ['취소', '확인'], alertCallback, {close:true, closeCallback:closeCallback});">x버튼 callback</button>
+
+    </div>
+  </div>
+  <!-- // container -->
+
+  </div>
+<!-- // wrap -->
+
+<script>
+  
+  function alertCallback(val){
+    if(val === '확인'){
+      alert('확인');
+    }else if(val === '취소'){
+      alert('취소');
+    }
+  }
+
+  function closeCallback(){
+    alert('closeCallback');
+  }
+
+</script>
+
+</body>
+</html>

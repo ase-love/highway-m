@@ -1,0 +1,197 @@
+  <!-- header -->
+  <header class="header">
+    <div class="header-menu">
+      <h1 class="logo"><a href="/"><img src="../images/common/logo.png" alt="하이웨이마트"></a></h1>
+      <div class="right">
+        <ul class="user-menu">
+          <li><a href="javascript:void(0);" onclick="$('.total-search-layer').toggle()"><i class="ico-search"></i></a></li>
+          <li><a href="javascript:void(0);"><i class="ico-user"></i></a></li>
+          <li><a href="javascript:void(0);"><i class="ico-cart"><span class="num">23</span></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="total-search-layer">
+      <div class="search-area">
+        <div class="input">
+          <input type="text" id="search" onkeyup="this.value.length > 0 ? $('#search-del').addClass('on') : $('#search-del').removeClass('on')">
+          <button class="btn-del" id="search-del" onclick="$('#search').val('');$('#search-del').removeClass('on')"></button>
+          <button class="btn">검색</button>
+        </div>
+        <div class="recent-list">
+          <b>최근검색어</b>
+          <ul>
+            <li>
+              <a href="javascript:void(0);" class="txt">오이</a>
+              <span class="date">2024.08.12</span>
+              <button type="button" class="close"></button>
+            </li>
+            <li>
+              <a href="javascript:void(0);" class="txt">자몽트레비</a>
+              <span class="date">2024.08.12</span>
+              <button type="button" class="close"></button>
+            </li>
+            <li>
+              <a href="javascript:void(0);" class="txt">오이</a>
+              <span class="date">2024.08.12</span>
+              <button type="button" class="close"></button>
+            </li>
+          </ul>
+          <p class="no-recent" style="display: none;">최근 검색어가 없습니다.</p>
+        </div>
+      </div>
+      <div class="layer-menu">
+        <button type="button" class="delete" onclick="$('.recent-list ul').html('');$('.no-recent').show()">전체삭제</button>
+        <button type="button" class="close" onclick="$('.total-search-layer').hide()">닫기</button>
+      </div>
+    </div>    
+    <!-- // total-search-layer -->
+    <nav class="gnb-menu">
+      <button type="button" class="btn-menu"></button>
+      <ul>
+        <li><a href="javascript:void(0);">이벤트/쿠폰</a></li>
+        <li><a href="javascript:void(0);">타임세일</a></li>
+        <li><a href="javascript:void(0);">전단상품</a></li>
+        <li><a href="javascript:void(0);">베스트</a></li>
+        <li><a href="javascript:void(0);">세일중</a></li>
+        <li><a href="javascript:void(0);">식자재</a></li>
+      </ul>
+    </nav>      
+  </header>
+  <!-- // header -->
+
+  <!-- category-menu-wrap -->
+  <aside class="category-menu-wrap">
+    <div class="menu-header">
+      <ul class="user-menu">
+        <li><a href="javascript:void(0);">로그아웃</a></li>
+        <li><a href="javascript:void(0);">마이페이지</a></li>
+      </ul>
+      <div class="right">
+        <button type="button" class="btn-barcode" onclick="popOpen('#pop-barcode');"></button>
+        <button type="button" class="btn-close"></button>
+      </div>
+    </div>
+    <!-- // menu-header -->
+     
+    <div class="txt-welcome">
+      <b>이재욱</b>님
+      <br>방문을 환영합니다.
+    </div>
+    <ul class="my-menu">
+      <li>
+        <a href="javascript:void(0);">
+          <span class="icon"><i class="ico-mileage"></i></span>
+          <span class="txt">마일리지</span>
+          <span class="number"><b class="num">73,230</b><span class="unit">원</span></span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0);">
+          <span class="icon"><i class="ico-coupon"></i></span>
+          <span class="txt">쿠폰</span>
+          <span class="number"><b class="num">0</b><span class="unit">장</span></span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0);">
+          <span class="icon"><i class="ico-favorite"></i></span>
+          <span class="txt">찜한상품</span>
+          <span class="number"><b class="num">3</b><span class="unit">개</span></span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0);">
+          <span class="icon"><i class="ico-view"></i></span>
+          <span class="txt">최근본상품</span>
+          <span class="number"><b class="num">1</b><span class="unit">개</span></span>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="nav-tab-menu">
+      <li class="on"><a href="javascript:void(0);" data-tab-id="tab-category">카테고리</a></li>
+      <li><a href="javascript:void(0);" data-tab-id="tab-search">검색</a></li>
+    </ul>
+    <!-- 카테고리 탭 -->
+    <div id="tab-category" class="tab-content">
+      <ul class="cate-menu">
+        <li><a href="javascript:void(0);">전단상품</a>
+          <ul>
+            <li><a href="javascript:void(0);">전체보기</a></li>
+            <li><a href="javascript:void(0);">과일</a></li>
+            <li><a href="javascript:void(0);">채소</a></li>
+            <li><a href="javascript:void(0);">쌀/잡곡/견과</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0);">베스트</a>
+          <ul>
+            <li><a href="javascript:void(0);">전체보기</a></li>
+            <li><a href="javascript:void(0);">과일</a></li>
+            <li><a href="javascript:void(0);">채소</a></li>
+            <li><a href="javascript:void(0);">쌀/잡곡/견과</a></li>
+          </ul>
+        </li>       
+        <li><a href="javascript:void(0);">세일중</a></li>
+        <li><a href="javascript:void(0);">식자재</a>
+          <ul>
+            <li><a href="javascript:void(0);">전체보기</a></li>
+            <li><a href="javascript:void(0);">과일</a></li>
+            <li><a href="javascript:void(0);">채소</a></li>
+            <li><a href="javascript:void(0);">쌀/잡곡/견과</a></li>
+          </ul>        
+        </li>
+        <li><a href="javascript:void(0);">이벤트&쿠폰</a></li>
+      </ul>
+    </div>
+    <!-- 검색 탭 -->
+    <div id="tab-search" class="tab-content" style="display: none;">
+      <div class="inp-search">
+        <input type="text" placeholder="상품명 검색">
+        <butto class="btn-search"><i class="ico-search"></i></butto>
+      </div>
+    </div>
+
+    <dl class="commuity-list">
+      <dt>COMMUNYTY</dt>
+      <dd>
+        <ul>
+          <li><a href="javascript:void(0);">공지사항</a></li>
+          <li><a href="javascript:void(0);">고객센터</a></li>
+        </ul>
+      </dd>
+    </dl>
+    <!-- // commuity-list -->
+
+  </aside>
+  <!-- // category-menu-wrap -->
+
+  <div class="floating-menu">
+    <button type="button" class="btn-top" onclick="$(window).scrollTop(0);"></button>
+  </div>
+
+  <!-- 바코드 layer-popup -->
+  <section class="layer-popup type2" id="pop-barcode">
+    <div class="dim"></div>
+    <div class="pop-wrap">
+      <div class="popup">
+        <button type="button" class="close-wthie" onclick="popClose('#pop-barcode');"></button>
+        <div class="pop-body">
+          <div class="bar-code-box">
+            <div class="info">
+              <span class="name"><b>김현민</b><span class="unit">님</span></span>
+              <div class="etc-info">
+                <b>수지성복점</b>
+                <span>일반회원</span>
+              </div>
+            </div>
+            <div class="bar-code">
+              <img src="../images/temp/temp-bar-code.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- // 바코드 layer-popup -->    
+     

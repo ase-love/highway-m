@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+
+    <div class="title-main-wrap">
+      <div class="title">
+        <div class="left">
+          <button type="button" class="btn-prev"></button>
+        </div>
+        <h1 class="title-main">마이페이지</h1>
+      </div>
+    </div>
+
+    <!-- container -->
+    <div class="container">
+      <main class="content">
+        <!-- mypage-info-wrap -->
+        <div class="mypage-info-wrap">
+          <div class="my-info-desc">
+            <p class="txt-welcome">이재욱님, 즐거운쇼핑 되세요!</p>
+            <div class="info-desc">
+              <p class="txt">이재욱님의
+                <br>회원등급은 일반회원등급 입니다.</p>
+              <div class="bar-code">
+                <img src="../images/temp/temp-bar-code.png" alt="">
+              </div>
+            </div>
+            <div class="my-wallet">
+              <ul>
+                <li>
+                  <div class="icon"><i class="ico-coupon"></i></div>
+                  <dl>
+                    <dt>쿠폰</dt>
+                    <dd><b>0</b><span>장</span></dd>
+                  </dl>
+                </li>
+                <li>
+                  <div class="icon"><i class="ico-mileage"></i></div>
+                  <dl>
+                    <dt>마일리지</dt>
+                    <dd><b>0</b><span>원</span></dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+            <!-- // my-wallet -->
+          </div>
+          <!-- // my-info-desc -->
+
+          <ul class="my-menu">
+            <li>
+              <b class="tit">쇼핑정보</b>
+              <ul>
+                <li><a href="javascript:void(0);">주문목록/배송조회</a></li>
+                <li><a href="javascript:void(0);">취소/반품/교환 내역</a></li>
+                <li><a href="javascript:void(0);">찜 리스트</a></li>
+                <li><a href="javascript:void(0);">최근 본 상품</a></li>
+                <li><a href="javascript:void(0);">정기배송</a></li>
+              </ul>
+            </li>
+            <li>
+              <b class="tit">혜택관리</b>
+              <ul>
+                <li><a href="javascript:void(0);">쿠폰</a></li>
+                <li><a href="javascript:void(0);">마일리지</a></li>
+              </ul>
+            </li>
+            <li>
+              <b class="tit">고객센터</b>
+              <ul>
+                <li><a href="javascript:void(0);">고객센터</a></li>
+                <li><a href="javascript:void(0);">1:1 문의</a></li>
+              </ul>
+            </li>
+            <li>
+              <b class="tit">회원정보</b>
+              <ul>
+                <li><a href="javascript:void(0);">회원정보 변경</a></li>
+                <li><a href="javascript:void(0);">배송지 관리</a></li>
+                <li><a href="javascript:void(0);">회원 탈퇴</a></li>
+              </ul>
+            </li>
+          </ul>          
+          <!-- // my-menu -->
+        </div>
+        <!-- // mypage-info-wrap -->
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+  <script>
+    basicSlide('#productSlide', {slidesPerView:4, spaceBetween:20, min:4})
+  </script>
+</body>
+</html>

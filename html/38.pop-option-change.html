@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+    <!-- container -->
+    <div class="container">
+      <main class="content">
+        
+
+
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+
+
+
+    <!-- layer-bottom-popup -->
+    <section class="layer-bottom-popup" id="pop-option-change">
+      <div class="dim"></div>
+      <div class="pop-wrap">
+        <div class="popup">
+          <button type="button" class="close" onclick="popClose('#pop-option-change');"></button>
+          <div class="pop-header">
+            <h1 class="pop-tit">옵션/수량 변경</h1>
+          </div>
+          <div class="pop-body">
+
+            <!-- product-description -->
+            <div class="product-description pop-st">
+              <div class="img-product">
+                <img src="../images/temp/temp-product-detail.png" alt="">
+              </div>
+
+              <div class="description">
+                <span class="name">푸르밀 딸기 우유</span>
+              </div>
+              <!-- // description -->
+               
+              <div class="option-box">
+                <div class="name">푸르밀 딸기 우유</div>
+                <div class="left">
+                  <div class="price">2,980원</div>
+                </div>
+                <div class="right">
+                  <div class="inp-num-type1" data-evt="inp-number" data-max="50">
+                    <button type="button" class="btn down" title="감소"></button>
+                    <input type="number" value="11" class="num">
+                    <button type="button" class="btn up" title="증가"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // product-description -->
+          </div>
+          <div class="pop-footer">
+            <div class="btn-wrap">
+              <button type="button" class="btn-type1 st1" onclick="popClose('#pop-option-change');">적용</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- // layer-bottom-popup -->
+  </div>
+  <!-- // wrap -->
+
+<script>
+  btmPopOpen('#pop-option-change')
+</script>  
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+
+    <div class="title-main-wrap">
+      <div class="title">
+        <div class="left">
+          <button type="button" class="btn-prev"></button>
+        </div>
+        <h1 class="title-main">회원 탈퇴</h1>
+      </div>
+    </div>    
+
+    <!-- container -->
+    <div class="container">
+      <main class="content">
+        <div class="withdrawal-wrap">
+          <h3 class="title-main">회원 탈퇴 안내</h3>
+          
+          <!-- 회원탈퇴 안내 -->
+          <div class="rule-withdrawal">
+            <div class="rule-box">
+              회원님께서 회원 탈퇴를 원하신다니 저희 쇼핑몰의 서비스가 많이 부족하고 미흡했나 봅니다.<br>
+              불편하셨던 점이나 불만사항을 알려주시면 적극 반영해서 고객님의 불편함을 해결해 드리도록 노력하겠습니다.<br>
+              <b>아울러 회원 탈퇴시의 아래 사항을 숙지하시기 바랍니다.</b>
+              1. 회원 탈퇴 시 회원님의 정보는 상품 반품 및 A/S를 위해 전자상거래 등에서의 소비자 보호에 관한 법률에 의거한 <br>
+              고객정보 보호정책에따라 관리 됩니다.<br>
+              2. 탈퇴 시 회원님께서 보유하셨던 마일리지는 삭제 됩니다
+            </div>
+          </div>
+          <!-- // rule-withdrawal -->
+        </div>
+        
+        <!-- 회원탈퇴 하기 -->
+        <div class="withdrawal-wrap line-bar">
+          <h3 class="title-main">회원 탈퇴</h3>
+          <div class="form-wrap">
+            <div class="col">
+              <div class="label">비밀번호</div>
+              <div class="form">
+                <input type="password" class="full">
+              </div>
+            </div>
+            <div class="col">
+              <div class="label">탈퇴사유</div>
+              <div class="form">
+                <select class="full">
+                  <option>탈퇴사유를 선택해주세요</option>
+                  <option>고객서비스(상담,포장 등) 불만</option>
+                  <option>배송불만</option>
+                  <option>교환/환불/반품 불만</option>
+                  <option>방문 빈도가 낮음</option>
+                  <option>상품가격 불만</option>
+                  <option>개인 정보유출 우려</option>
+                  <option>쇼핑몰의 신뢰도 불만</option>
+                </select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="label">남기실 말씀</div>
+              <div class="form">
+                <div class="textarea" style="height:7.5rem;"><textarea></textarea></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-wrap">
+          <a href="javascript:void(0);" class="btn-type1 st1">확인</a>
+        </div>
+
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+</body>
+</html>

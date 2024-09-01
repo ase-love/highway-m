@@ -1,0 +1,18 @@
+@charset 'utf-8';
+
+$size: 16px;
+
+// 단위제거
+@function stripUnit($value){
+  @return $value / ($value * 0 + 1);
+}
+
+// 위에 이상함 아래로 변경 테스트
+@function rem($pxValue){
+  // @return #{$pxValue / 16}rem;
+
+  @return unquote(calc(stripUnit($pxValue) / stripUnit($size)) +'rem');
+
+  // 소수점 3자리끼만 표기
+  // @return unquote(calc(round((stripUnit($pxValue) / stripUnit($size)) * 1000)/1000) +'rem');
+}

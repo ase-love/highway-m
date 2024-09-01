@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+    <!-- container -->
+    <div class="container">
+      <main class="content">
+        
+
+
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+
+
+
+    <!-- layer-bottom-popup -->
+    <section class="layer-bottom-popup" id="pop-coupon-apply">
+      <div class="dim"></div>
+      <div class="pop-wrap">
+        <div class="popup">
+          <button type="button" class="close" onclick="popClose('#pop-coupon-apply');"></button>
+          <div class="pop-header">
+            <h1 class="pop-tit">쿠폰 적용하기</h1>
+            <span class="tit-sub">사용가능한 쿠폰만 노출됩니다.</span>
+          </div>
+          <div class="pop-body">
+            <div class="v-scroll" style="max-height: 470px;">
+              <!-- 주문 쿠폰 -->
+              <table class="table-type1">
+                <colgroup>
+                    <col style="width:50%">
+                    <col style="width:50%;">		
+                </colgroup>
+                <thead>
+                  <tr>
+                      <th>주문 쿠폰</th>
+                      <th>사용조건</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="align-l">
+                      <label class="inp-chk coupon">
+                        <input type="radio" name="coupon"><span class="ic"></span>
+                        <span class="t">7월 여름맞이 <br>1만원 할인쿠폰</span>
+                      </label>
+                    </td>
+                    <td class="align-r">100,000원 이상 구매시 <br>10,000원 할인</td>
+                  </tr>
+                  <tr>
+                    <td class="align-l">
+                      <label class="inp-chk coupon">
+                        <input type="radio" name="coupon"><span class="ic"></span>
+                        <span class="t">7월 여름맞이 <br>1만원 할인쿠폰</span>
+                      </label>
+                    </td>
+                    <td class="align-r">100,000원 이상 구매시 <br>10,000원 할인</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- 배송비쿠폰 -->
+              <table class="table-type1">
+                <colgroup>
+                    <col style="width:50%">
+                    <col style="width:50%;">		
+                </colgroup>
+                <thead>
+                  <tr>
+                      <th>배송비 쿠폰</th>
+                      <th>사용조건</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="2">
+                      <div class="no-data">사용 가능한 쿠폰이 없습니다.</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="pop-footer">
+            <div class="btn-wrap">
+              <button type="button" class="btn-type1 st1" onclick="popClose('#pop-coupon-apply');">쿠폰 적용</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- // layer-bottom-popup -->
+  </div>
+  <!-- // wrap -->
+
+
+<script>
+  btmPopOpen('#pop-coupon-apply')
+</script>  
+
+</body>
+</html>

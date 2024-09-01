@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+
+    <div class="title-main-wrap">
+      <div class="title">
+        <div class="left">
+          <button type="button" class="btn-prev"></button>
+        </div>
+        <h1 class="title-main">주문서 작성</h1>
+      </div>
+    </div>
+
+    <!-- container -->
+    <div class="container">
+      <main class="content">
+        <div class="payment-wrap">
+          <!--  주문 상품 -->
+          <div class="section-box">
+            <h3 class="title-main">주문 상품</h3>
+              <!-- data-list2 -->
+              <div class="data-list2">
+                <ul>
+                  <li>
+                    <div class="order-product">
+                      <div class="img"><img src="../images/temp/temp-product-detail.png" alt=""></div>
+                      <div class="desc">
+                        <div class="name">푸르밀 딸기 우유</div>
+                        <div class="price"><b>29,000원</b><span class="org">40,000원</span></div>
+                        <div class="order-num">
+                          <span class="delivery">무료배송</span>
+                          <span class="num">1개</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="order-product">
+                      <div class="img"><img src="../images/temp/temp-product-detail.png" alt=""></div>
+                      <div class="desc">
+                        <div class="name">푸르밀 딸기 우유</div>
+                        <div class="price"><b>29,000원</b><span class="org">40,000원</span></div>
+                        <div class="order-num">
+                          <span class="delivery">무료배송</span>
+                          <span class="num">1개</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- // data-list2 -->
+          </div>
+          <!--  // 주문 상품 -->
+        
+          <!-- 주문자 -->
+          <div class="section-box line-bar">
+            <h3 class="title-main">주문자</h3>
+            <div class="form-wrap">
+              <div class="col">
+                <div class="label">주문자</div>
+                <div class="form">
+                  <input type="text" class="full">
+                </div>
+              </div>
+              <div class="col">
+                <div class="label">휴대폰 번호</div>
+                <div class="form">
+                  <input type="text" class="full" value="010-5677-2239">
+                </div>
+              </div>
+            </div>
+          </div>         
+          <!-- // 주문자 -->
+          
+          <!-- 배송지 -->
+          <div class="section-box line-bar">
+            <h3 class="title-main">배송지</h3>
+            <div class="addr-unit">
+              <div class="address">
+                <div class="menu">
+                  <button type="button" class="btn-type3 st7">변경</button>
+                </div>
+                <div class="sort">
+                  <b>집</b>
+                  <span class="tag">기본배송지</span>
+                  <span class="pos c-red">수지성복점</span>
+                </div>
+                <div class="contact">김현민 / 010-2456-0637</div>
+                <div class="addr">
+                  [16851] 경기도 용인시 수지구 성복2로 110
+                  4층, 기획실
+                </div>
+              </div>
+            </div>          
+            <div class="form-wrap">
+              <div class="col">
+                <div class="label">요청사항</div>
+                <div class="form">
+                  <input type="text" class="full">
+                </div>
+              </div>
+            </div>
+          </div>         
+          <!-- // 배송지 -->
+          
+          <!-- 할인혜택 -->
+          <div class="section-box line-bar">
+            <h3 class="title-main">할인혜택</h3>
+            <div class="form-wrap st-line">
+              <div class="col">
+                <div class="price-wrap">
+                  <div class="label">상품할인</div>
+                  <div class="right"><span class="price">-11,000원</span></div>
+                </div>
+                <div class="price-wrap">
+                  <div class="label">유료회원할인</div>
+                  <div class="right"><span class="price">- 0원</span></div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="price-wrap">
+                  <div class="label">쿠폰할인</div>
+                  <div class="right">
+                    <button type="button" class="btn-type3 st7">변경</button>
+                  </div>
+                  <div class="price">- 2,000원</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="label">마일리지 사용</div>
+                <div class="form">
+                  <div class="row">
+                    <input type="text" class="auto">
+                    <button type="button" class="btn-type2 st7">모두 사용</button>
+                  </div>
+                  <div class="block">
+                    <p class="txt c-blue">(보유 마일리지 : 0)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>         
+          <!-- // 할인혜택 -->
+
+          <!-- 결제방법 -->
+          <div class="section-box line-bar">
+            <h3 class="title-main">결제방법</h3>
+            <ul class="input-check-list">
+              <li>
+                <label class="inp-chk">
+                  <input type="radio" name="method" checked value="1"><span class="ic"></span>
+                  <span class="t">일반결제</span>
+                </label>
+              </li>
+                <li>
+                  <label class="inp-chk">
+                    <input type="radio" name="method" value="2"><span class="ic"></span>
+                    <span class="t">만나서결제</span>
+                  </label>
+                </li>
+            </ul>
+
+            <!-- method-check-wrap -->
+            <div class="method-check-wrap">
+              <!-- 일반결제 -->
+              <div id="nomalPayment">
+                <div class="input-wrap type-btn grid3">
+                  <label class="inp-chk">
+                    <input type="radio" name="normal-method" checked value="1"><span class="ic"></span>
+                    <span class="t">무통장 입금</span>
+                  </label>
+                    <label class="inp-chk">
+                      <input type="radio" name="normal-method" value="2"><span class="ic"></span>
+                      <span class="t">카드결제</span>
+                  </label>
+                  <label class="inp-chk">
+                      <input type="radio" name="normal-method" value="3"><span class="ic"></span>
+                      <span class="t">하이웨이페이</span>
+                  </label>
+                    <label class="inp-chk">
+                      <input type="radio" name="normal-method" value="4"><span class="ic"></span>
+                      <span class="t">실시간계좌이체</span>
+                  </label>
+                </div>
+                <div class="detail-bx" id="bank">
+                  <p class="txt">( 무통장 입금 의 경우 입금확인 후부터 배송단계가 진행됩니다. )</p>
+                  <div class="form-wrap">
+                    <div class="col">
+                      <div class="label">입금자명</div>
+                      <div class="form">
+                        <input type="text" class="full">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="label">입금은행</div>
+                      <div class="form">
+                        <select class="full">
+                          <option value="">선택하세요</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- // 일반결제 -->
+              <!-- 만나서결제 -->
+              <div id="directPayment" style="display:none">
+                <div class="input-wrap type-btn grid2">
+                  <label class="inp-chk">
+                    <input type="radio" name="direct-method" checked value="1"><span class="ic"></span>
+                    <span class="t">대면카드결제</span>
+                  </label>
+                    <label class="inp-chk">
+                      <input type="radio" name="direct-method" value="2"><span class="ic"></span>
+                      <span class="t">대면현금결제</span>
+                  </label>
+                </div>
+              </div>
+              <!-- // 만나서결제 -->
+            </div>
+            <!-- // method-check-wrap -->
+        
+          </div> 
+          <!-- // 결제방법 -->
+
+          <!-- 현금영수증 -->
+          <div class="section-box line-bar" id="cashReceipt">
+            <h3 class="title-main">현금영수증</h3>
+            <ul class="input-check-list">
+              <li>
+                <label class="inp-chk">
+                  <input type="radio" name="recipt" value="1" checked><span class="ic"></span>
+                  <span class="t">신청안함</span>
+                </label>
+              </li>
+                <li>
+                  <label class="inp-chk">
+                    <input type="radio" name="recipt" value="2"><span class="ic"></span>
+                    <span class="t">개인소득공제용</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="inp-chk">
+                      <input type="radio" name="recipt" value="3"><span class="ic"></span>
+                      <span class="t">지출증빙용</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="inp-chk">
+                    <input type="radio" name="recipt" value="4"><span class="ic"></span>
+                    <span class="t">세금계산서</span>
+                  </label>
+                </li>
+            </ul>
+
+            <div class="recipt-detail-bx">
+              <div class="detail-bx" id="money" style="display:none">
+                <div class="recipt-info-save">
+                  <label class="inp-chk">
+                    <input type="checkbox"><span class="ic"></span>
+                    <span class="t">현재 현금영수증 정보 저장</span>
+                  </label>
+                  <select>
+                    <option>휴대폰번호</option>
+                    <option>휴대폰번호2</option>
+                  </select>
+                  <input type="number" placeholder="숫자만 입력해 주세요">
+                </div>
+              </div>
+              <div class="detail-bx" id="biz-num" style="display:none">
+                <div class="recipt-info-save">
+                  <label class="inp-chk">
+                    <input type="checkbox"><span class="ic"></span>
+                    <span class="t">현재 사업자등록증 정보 저장</span>
+                  </label>
+                  <input type="text" placeholder="숫자만 입력해주세요">
+                </div>
+              </div>
+              <div class="detail-bx" id="tax" style="display:none">
+                <p class="c-red">*매장을 통해 세금계산서 발급 신청하신 경우에만 발급됩니다.</p>
+              </div>
+            </div>            
+          </div>         
+          <!-- // 현금영수증 -->
+
+          <!-- 결제금액 -->
+          <div class="section-box line-bar">
+            <h3 class="title-main">결제금액</h3>
+            <div class="price-sum-wrap">
+              <dl class="price-sum-list">
+                <dt>
+                  <span class="label">주문금액</span>
+                  <span class="price">60,000원</span>
+                </dt>
+                <dd>
+                  <ul>
+                    <li>
+                      <span class="label">유료회원할인</span>
+                      <span class="price">- 0원</span>
+                    </li>
+                    <li>
+                      <span class="label">마일리지 사용</span>
+                      <span class="price">- 0원</span>
+                    </li>
+                    <li>
+                      <span class="label">쿠폰할인</span>
+                      <span class="price">- 2,000원</span>
+                    </li>
+                    <li>
+                      <span class="label">배송비</span>
+                      <span class="price">0원</span>
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+              <div class="total-price">
+                <span class="label">최종 결제 금액</span>
+                <span class="price"><b>58,000</b><span class="unit">원</span></span>
+              </div>
+            </div>
+          </div>     
+
+          <!-- 동의 --> 
+          <div class="section-box line-bar">
+            <div class="agree-txt">
+              구매하실 상품의 결제정보를 확인하였으며,
+              <br>구매진행에 동의합니다.
+            </div>
+            <div class="btn-wrap">
+              <button class="btn-type1 st6">결제하기</button>
+            </div>            
+          </div>
+          
+        </div>
+        <!-- // payment-wrap -->
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+<script>
+  $('[name="method"]').on('change', function(){
+    if($(this).val() == 1 ){
+      $('#nomalPayment').show();
+      $('#directPayment').hide();
+      $('#cashReceipt').show();
+    }else{
+      $('#directPayment').show();
+      $('#nomalPayment').hide();
+      $('#cashReceipt').hide();
+    }
+  });
+
+  //일반결제
+  $('[name="normal-method"]').on('change', function(){
+    if($(this).val() == 1 ){
+      $('#bank').show();
+    }else{
+      $('#bank').hide();
+    }
+  });
+  
+  //만나서결제
+  $('[name="recipt"]').on('change', function(){
+    $('.recipt-detail-bx .detail-bx').hide();
+    if($(this).val() == 2 ){
+      $('#money').show();
+    }else if($(this).val() == 3){
+      $('#biz-num').show();
+    }else if($(this).val() == 4){
+      $('#tax').show();
+    }
+  });
+</script>
+</body>
+</html>

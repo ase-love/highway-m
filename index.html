@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<script src="js/jquery-3.7.1.min.js"></script>
+
+</head>
+<!-- style -->
+<style type="text/css">
+  *{margin:0;padding:0;}
+  body {padding:20px; font-family:Tahoma, Sans-Serif; color:#333; font-size:11px; background-color:#fff;}
+  h1 {color:#000; letter-spacing:-2px;}
+  h2 {margin-top:20px;padding-left:10px;letter-spacing:-2px;position:relative;font-size:18px;}
+  h2:before{content:'';display:block;position:absolute;top:50%;left:0;width:5px;height:5px;background:#333;transform:translateY(-50%);-webkit-transform:translateY(-50%);}
+  .currentsite {display:block; position:absolute; right:40px; top:20px;}
+  .mwork table {width:100%; border-collapse:collapse; border:0px solid #666;margin-top:10px;}
+  .mwork caption {text-align:left; font-size:200%; color:#999;}
+  .mwork th {padding:6px; border:1px solid #fff; color:#fff; font-size:110%; background-color:#1F5DBE;}
+  .mwork td {height:16px; padding:4px; padding-left:10px; border:1px solid #666;}
+  .mwork a,
+  .mwork a:link, #mwork a:visited {color:#009; text-decoration:none;}
+  .mwork a:hover, #mwork a:active {color:#00f; text-decoration:underline;}
+  .mwork td:hover {background-color:#ddd !important;}
+  
+
+  .title td{background:#eee;}
+
+</style>
+<!-- //style -->
+<!-- html body -->
+<script>
+  $(function(){
+    let data =[
+      //공통 
+      ["공통", "title", ""],
+      ["", "로딩", "", "html/loading.html", ""],
+      ["", "얼럿", "", "html/alert.html", ""],
+      ["", "no-data", "", "html/nodata.html", ""],
+      //메인 
+      ["메인", "title", ""],
+      ["", "1.메인", "", "html/1.main.html", ""],      
+      //대메뉴 
+      ["대메뉴", "title", ""],
+    ["", "2.타임세일", "", "html/2.timesale.html", ""],      
+      ["", "3.베스트", "", "html/3.best.html", ""],      
+      ["", "4.전단상품", "", "html/4.flyer-products.html", ""],      
+      ["", "5.식자재", "", "html/5.ingredient.html", ""],      
+      ["", "6.세일중", "", "html/6.on-sale.html", ""],      
+      ["", "7.이벤트쿠폰", "", "html/7.event.html", ""],      
+      //Pages 
+      ["Pages", "title", ""],
+      ["", "8.회사소개", "", "html/8.about.html", ""],      
+      ["", "9.이용약관", "", "html/9.agreement.html", ""],       
+      ["", "10.개인정보처리방침", "", "html/10.private.html", ""],      
+      ["", "11.이용안내", "", "html/11.guide.html", ""],      
+      ["", "12.광고·제휴게시판", "", "모바일없음", ""], 
+      ["", "13.회원가입(이용약관)", "", "html/13.join-rule.html", ""],      
+      ["", "14.회원가입", "", "html/14.join-form.html", ""],      
+      ["", "15.회원가입완료", "", "html/15.join-complete.html", ""],      
+      ["", "16.로그인", "", "html/16.login.html", ""],      
+      ["", "17.카카오톡 간편가입 동의 페이지", "", "해당없음", ""],      
+      ["", "18.카카오톡 간편가입 추가 정보 페이지", "", "html/18.additional-info.html", ""],      
+      ["", "19.카카오회원 연동확인", "", "html/19.pop-linkage-checked.html", ""],      
+      ["", "20.카카오회원 연동완료", "", "html/20.pop-linkage-complete.html", ""],      
+      ["", "21.카카오로그인페이지", "", "해당없음", ""],      
+      ["", "22.아이디찾기", "", "html/22.id-find.html", ""],      
+      ["", "23.비밀번호찾기", "", "html/23.pw-find.html", ""],      
+      ["", "24.아이디찾기결과", "", "html/24.id-find-result.html", ""],      
+      ["", "25.비밀번호찾기인증", "", "html/25.pw-find-certify.html", ""],      
+      ["", "26.비밀번호재설정", "", "html/26.pw-reset.html", ""],      
+      ["", "27.비밀번호 재설정완료", "", "html/27.pop-check-complete.html", ""],      
+      ["", "28.공지사항", "", "html/28.notice.html", ""],      
+      ["", "29.공지사항 내부", "", "html/29.notice-detail.html", ""],      
+      ["", "30.제품상세페이지", "", "html/30.product-detail.html", ""],      
+      ["", "31.상품할인쿠폰적용", "", "html/31.pop-coupon.html", ""],
+      ["", "32.하위카테고리", "", "html/32.subcategory.html", ""],
+      ["", "33.상품검색결과", "", "html/33.search-result.html", ""],
+      ["", "34.타임세일 상세페이지", "", "html/34.timesale-detail.html", ""],
+      ["", "35.이벤트 상세페이지", "", "html/35.event-detail.html", ""],
+      ["", "36.장바구니", "", "html/36.cart.html", ""],
+      ["", "37.상품할인쿠폰적용", "", "html/31.pop-coupon.html", "31과 동일"],
+      ["", "38.옵션,수량변경", "", "html/38.pop-option-change.html", ""],      
+      ["", "39.결제페이지", "", "html/39.payment.html", ""],      
+      ["", "40.쿠폰조회및적용", "", "html/40.pop-coupon-apply.html", ""],      
+      ["", "41.배송지 관리", "", "html/41.pop-delivery.html", ""],      
+      ["", "41-1.배송지 관리 추가", "", "html/41-1.pop-delivery-add.html", ""],      
+      ["", "42.결제완료", "", "html/42.payment-complete.html", ""],      
+      ["", "43.최근본상품", "", "html/43.recent-product.html", ""],      
+      ["", "44.마이페이지", "", "html/44.mypage.html", ""],      
+      ["", "45.주문목록배송조회", "", "html/45.delivery-list.html", ""],      
+      ["", "46.취소반품교환내역", "", "html/46.cancel-list.html", ""],      
+      ["", "47.찜리스트", "", "html/47.favorite-list.html", ""],      
+      ["", "48.쿠폰", "", "html/48.coupon.html", ""],      
+      ["", "48-1.쿠폰등록", "", "html/48-1.pop-coupon-regist.html", ""],      
+      ["", "49.마일리지", "", "html/49.mileage.html", ""],      
+      ["", "50.고객센터(1:1문의)", "", "html/50.customer.html", ""],        
+      ["", "51.회원정보변경 인증", "", "html/51.member-certify.html", ""],      
+      ["", "52.회원정보변경", "", "html/52.member-modify.html", ""],      
+      ["", "53.회원탈퇴", "", "html/53.member-withdrawal.html", ""],      
+      ["", "54.배송지관리", "", "html/54.delivery-manage.html", ""],      
+      ["", "55.새배송지추가", "", "html/41-1.pop-delivery-add.html", "41-1과 동일"],      
+      ["", "56.정기구독형판매", "", "html/56.subscription-type.html", ""],      
+      ["", "57.정기구독형_마이페이지", "", "html/57.subscription-my.html", ""],      
+      ["", "58.전단보기", "", "html/58.pop-leaflet.html", ""],      
+      
+    ]
+
+    for(var i = 0 ; i<= data.length -1 ; i++){
+      if(data[i][1] == 'title'){
+        $('tbody').append('<tr class="title">'+
+          '<td>'+data[i][0]+'</td>' +
+          '<td></td>' +
+          '<td></td>' +
+          '<td></td>' +
+          '<td></td>' +
+        '</tr>')
+      }else{
+        $('tbody').append('<tr>'+
+          '<td>'+data[i][0]+'</td>' +
+          '<td>'+data[i][1]+'</td>' +
+          '<td>'+data[i][2]+'</td>' +
+          '<td><a href="'+data[i][3]+'">'+data[i][3]+'</a></td>' +
+          '<td>'+data[i][4]+'</td>' +
+        '</tr>')
+      }
+    }
+  });
+
+
+</script>
+</head>
+<body>
+<!-- sheet -->
+<h1>Publishing Work Sheet</h1>
+
+<div class="mwork">
+  <table>
+    <colgroup>
+			<col style="width:140px" />
+			<col style="width:250px" />
+			<col style="width:140px" />
+			<col style="width:300px" />
+			<col style="width:auto" />
+    </colgroup>
+
+    <thead>
+      <tr>
+				<th>Category</th>
+				<th>1Depth</th>
+				<th>2Depth</th>
+				<th>FileName/Link</th>
+				<th>Memo</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+</div>
+
+<!-- //sheet -->
+
+</body>
+</html>

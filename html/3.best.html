@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+
+    <div class="title-main-wrap">
+      <div class="title">
+        <div class="left">
+          <button type="button" class="btn-prev"></button>
+        </div>
+        <h1 class="title-main">베스트</h1>
+      </div>
+    </div>    
+    <!-- container -->
+    <div class="container">
+      
+      <div class="category-box">
+        <ul data-evt="toggle-btns">
+          <li class="on"><a href="javascript:void(0);"><span>농산/정육/수산</span></a></li>
+          <li><a href="javascript:void(0);"><span>가공식품</span></a></li>
+          <li><a href="javascript:void(0);"><span>주방조리용품</span></a></li>
+          <li><a href="javascript:void(0);"><span>생활용품</span></a></li>
+          <li><a href="javascript:void(0);"><span>대용량/선물세트</span></a></li>
+        </ul>
+      </div>
+            
+      <!-- content -->
+      <main class="content">
+        
+        <div class="product-list-wrap">
+          <div class="data-top">
+            <select class="no-line">
+              <option selected="selected">추천순</option>
+              <option>낮은가격순</option>
+              <option>높은가격순</option>
+              <option>상품평순</option>
+              <option>등록일순</option>
+          </select>
+            <div class="right">
+              <div class="align-btns">
+                <button type="button" class="btn-list"></button>
+                <button type="button" class="btn-grid on"></button>
+              </div>
+            </div>
+          </div>
+          <!-- product-list -->
+          <div class="product-list grid">
+            <ul>
+              <li>
+                <div class="item-cont">
+                  <div class="item-photo-box">
+                    <a href="javascript:void(0);">
+                      <img src="../images/temp/temp-product-1.jpg" alt="">
+                    </a>
+                    <div class="item-link">
+                      <button type="button"><i class="ico-cart-white"></i></button>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0);" class="item_info_cont">
+                    <div class="item-tit-box">
+                      <strong class="item-name">오가닉몰 유기농</strong>
+                      <span class="item-name-sub">유료회원가 5,690원</span>
+                    </div>
+                    <div class="item-money-box">
+                      <span class="fixed-price">34,000원 </span>
+                      <span class="sale-rate"><span><b>14</b></span><em>%</em></span>
+                      <strong class="item-price">
+                        <span>29,000원 </span>
+                      </strong>
+                    </div>
+                  </a>
+                  <!-- //item_info_cont -->
+                </div>
+              </li>
+              <li>
+                <div class="item-cont">
+                  <div class="item-photo-box">
+                    <a href="javascript:void(0);">
+                      <img src="../images/temp/temp-product-2.jpg" alt="">
+                    </a>
+                    <div class="item-link">
+                      <button type="button"><i class="ico-cart-white"></i></button>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0);" class="item_info_cont">
+                    <div class="item-tit-box">
+                      <strong class="item-name">오가닉몰 유기농 현미 스낵</strong>
+                      <span class="item-name-sub">유료회원가 5,690원</span>
+                    </div>
+                    <div class="item-money-box">
+                      <span class="fixed-price">34,000원 </span>
+                      <span class="sale-rate"><span><b>14</b></span><em>%</em></span>
+                      <strong class="item-price">
+                        <span>29,000원 </span>
+                      </strong>
+                    </div>
+                  </a>
+                  <!-- //item_info_cont -->
+                </div>
+              </li>
+              <li>
+                <div class="item-cont">
+                  <div class="item-photo-box">
+                    <a href="javascript:void(0);">
+                      <img src="../images/temp/temp-product-3.jpg" alt="">
+                    </a>
+                    <div class="item-link">
+                      <button type="button"><i class="ico-cart-white"></i></button>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0);" class="item_info_cont">
+                    <div class="item-tit-box">
+                      <strong class="item-name">오가닉몰 유기농 현미 스낵</strong>
+                      <span class="item-name-sub">유료회원가 5,690원</span>
+                    </div>
+                    <div class="item-money-box">
+                      <span class="fixed-price">34,000원 </span>
+                      <span class="sale-rate"><span><b>14</b></span><em>%</em></span>
+                      <strong class="item-price">
+                        <span>29,000원 </span>
+                      </strong>
+                    </div>
+                  </a>
+                  <!-- //item_info_cont -->
+                </div>
+              </li>
+              <li>
+                <div class="item-cont">
+                  <div class="item-photo-box">
+                    <a href="javascript:void(0);">
+                      <img src="../images/temp/temp-product-4.jpg" alt="">
+                    </a>
+                    <div class="item-link">
+                      <button type="button"><i class="ico-cart-white"></i></button>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0);" class="item_info_cont">
+                    <div class="item-tit-box">
+                      <strong class="item-name">오가닉몰 유기농 현미 스낵</strong>
+                      <span class="item-name-sub">유료회원가 5,690원</span>
+                    </div>
+                    <div class="item-money-box">
+                      <span class="fixed-price">34,000원 </span>
+                      <span class="sale-rate"><span><b>14</b></span><em>%</em></span>
+                      <strong class="item-price">
+                        <span>29,000원 </span>
+                      </strong>
+                    </div>
+                  </a>
+                  <!-- //item_info_cont -->
+                </div>
+              </li>
+              <li>
+                <div class="item-cont">
+                  <div class="item-photo-box">
+                    <a href="javascript:void(0);">
+                      <img src="../images/temp/temp-product-5.jpg" alt="">
+                    </a>
+                    <div class="item-link">
+                      <button type="button"><i class="ico-cart-white"></i></button>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0);" class="item_info_cont">
+                    <div class="item-tit-box">
+                      <strong class="item-name">오가닉몰 유기농 현미 스낵</strong>
+                      <span class="item-name-sub">유료회원가 5,690원</span>
+                    </div>
+                    <div class="item-money-box">
+                      <span class="fixed-price">34,000원 </span>
+                      <span class="sale-rate"><span><b>14</b></span><em>%</em></span>
+                      <strong class="item-price">
+                        <span>29,000원 </span>
+                      </strong>
+                    </div>
+                  </a>
+                  <!-- //item_info_cont -->
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- // product-list -->
+          <div class="btn-more-wrap">
+            <a href="javascript:void(0);" class="btn-more"><span>더보기</span></a>
+          </div>
+        </div>
+        <!-- // product-list-wrap -->
+
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+</body>
+</html>
