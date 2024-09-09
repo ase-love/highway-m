@@ -1788,7 +1788,11 @@
 
 
   <script>
-    basicSlide('#mainSlide', {loop:false,slidesPerView:1, min:1, pagination: {
+    basicSlide('#mainSlide', {loop:false,slidesPerView:1, min:1, 
+      autoplay:{
+        dealy: 300
+      },      
+      pagination: {
         el: ".swiper-pagination",
         type: "fraction",
       }})

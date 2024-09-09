@@ -299,6 +299,7 @@ function tabScrollEvt(){
 }
 
 function posFixed(obj){
+  if($(obj).length <= 0) return;
   $(window).on('scroll', function(){
     let st = $(window).scrollTop();
     let top = $(obj).offset().top;
