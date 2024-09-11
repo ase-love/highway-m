@@ -36,7 +36,7 @@
 .main-slider:not(.swiper-initialized) .swiper-wrapper{justify-content: center;}
 .main-slider .swiper-pagination {position:absolute;bottom:rem(5) !important;right:rem(14);font-size:rem(13);padding:0 rem(13); color:#c5c1bf;z-index: 10;display:inline-block;width: auto;margin-top:0;background:rgba(0, 0, 0, 0.5);height:rem(25);display:inline-flex;align-items:center;border-radius:rem(25);}
 .main-slider .swiper-pagination span{width:auto;height:auto;background:none !important;font-size:rem(13);margin:0  rem(2)!important;line-height:1;}
-.main-slider .swiper-pagination span.swiper-pagination-current{color:#fff;}
+.main-slider .swiper-pagination span.swiper-pagination-current{color:#fff;vertical-align:baseline;}
 .main-slider .swiper-slide img{width:100%;}
 /* */
 .week-product-wrap + .main-banner-wrap{margin-top:rem(40);}
@@ -78,8 +78,8 @@
 .main-goods-list .item-photo-box img{width:100%;}
 .main-goods-list .item_info_cont{text-align:center;}
 .main-goods-list .item-cont .item_info_cont .item-money-box{justify-content: center;}
-.main-goods-list .swiper-button-prev{top:120px;transform: translateX(-650px) translateY(0);}
-.main-goods-list .swiper-button-next{top:120px;transform: translateX(650px) translateY(0);}
+.main-goods-list .swiper-button-prev{top:rem(75);left:50%;margin-left:rem(-15);transform: translateX(-115px);}
+.main-goods-list .swiper-button-next{top:rem(75);right:50%;margin-left:rem(-15);transform: translateX(115px);}
 /* */
 .main-slider-banner{margin-top:rem(40);padding:0 rem(14); width:100%;overflow:hidden;}
 .main-slider-banner .wrapper:not(.swiper-initialized) .swiper-pagination{display:none;}
@@ -408,7 +408,9 @@
 .product-description .total-price .label {font-size:rem(16); color:#000000;font-weight:600;}
 .product-description .total-price .price {margin-left:rem(10);font-size:rem(16); color:#e32323;font-weight:700;}
 .product-description .btn-menu {display:flex;align-items:center;gap:rem(5);}
-.product-description .btn-menu .btn-favorite {height:rem(40);width:rem(40);border-radius:rem(4);border:1px solid #b2b2b2;background:url("data:image/svg+xml,%3Csvg width='30' height='28' viewBox='0 0 30 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.10495 15.375C3.10495 15.375 13.937 25.643 14.5 25.643C15.063 25.643 25.895 15.375 25.895 15.375C27.557 13.757 28.498 11.488 28.498 9.11502V8.78403C28.498 4.78703 25.736 1.38002 21.969 0.723025C19.476 0.289025 16.938 1.14102 15.156 3.00402L14.5 3.69002L13.844 3.00402C12.061 1.14102 9.52395 0.289025 7.03095 0.723025C3.26295 1.38002 0.501953 4.78703 0.501953 8.78403V9.11502C0.501953 11.488 1.44295 13.757 3.10495 15.375Z' stroke='black'/%3E%3C/svg%3E%0A") no-repeat 50% 55%;background-size:auto rem(18);}
+.product-description .btn-menu .btn-favorite {height:rem(40);width:rem(40);display:flex;align-items:center;justify-content: center; border-radius:rem(4);border:1px solid #b2b2b2;}
+.product-description .btn-menu .btn-favorite:before{content:'';display:block;width:rem(20);height:rem(18); background:url("data:image/svg+xml,%3Csvg width='24' height='22' viewBox='0 0 24 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.04551 12.6013C3.04551 12.6013 11.5576 20.6702 12 20.6702C12.4424 20.6702 20.9545 12.6013 20.9545 12.6013C22.2605 11.3299 23 9.54681 23 7.68205V7.42194C23 4.28099 20.8295 1.60368 17.8693 1.08739C15.9103 0.746342 13.9158 1.41587 12.5155 2.87986L12 3.41894L11.4845 2.87986C10.0834 1.41587 8.08973 0.746342 6.13066 1.08739C3.16967 1.60368 1 4.28099 1 7.42194V7.68205C1 9.54681 1.73946 11.3299 3.04551 12.6013Z' stroke='black'/%3E%3C/svg%3E%0A") no-repeat 50% 50%;background-size:98% 100%;}
+.product-description .btn-menu .btn-favorite.on:before{background-image: url("data:image/svg+xml,%3Csvg width='28' height='26' viewBox='0 0 28 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.603 15.375C2.603 15.375 13.435 25.643 13.998 25.643C14.561 25.643 25.393 15.375 25.393 15.375C27.055 13.757 27.996 11.488 27.996 9.11502V8.78403C27.996 4.78703 25.234 1.38002 21.467 0.723025C18.974 0.289025 16.436 1.14102 14.654 3.00402L13.998 3.69002L13.342 3.00402C11.559 1.14102 9.022 0.289025 6.529 0.723025C2.761 1.38002 0 4.78703 0 8.78403V9.11502C0 11.488 0.941 13.757 2.603 15.375Z' fill='%23E32323'/%3E%3C/svg%3E%0A"); -webkit-animation: zoomItBig 500ms ease-out; opacity: 1; }
 .product-description .btn-menu .btn-cart {height:rem(40);flex:1;background:#e32323; color:#fff;font-size:rem(14);font-weight:700;border-radius:rem(4);display:flex;justify-content:center;align-items:center;}
 /* */
 .product-description.pop-st{display:flex;align-items:center;flex-wrap: wrap;}

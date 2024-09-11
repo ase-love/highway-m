@@ -103,6 +103,10 @@ function centerSlide(id, opt){
     speed :800,
     slidesPerView: 'auto',
     centeredSlides: true,
+    navigation: {
+      nextEl: id + " .swiper-button-next",
+      prevEl: id + " .swiper-button-prev",
+    },     
   }
   let swiper = new Swiper(id, Object.assign(option, opt));
   if(opt.centeredSlides){
@@ -480,6 +484,14 @@ function comma(){
   })
 }
 
+
+function productMenuCheck(){
+  $('.item-cont .item-link button').on('click', function(){
+    $(this).toggleClass('on');
+  });
+}
+
+
 /* popup */
 function popClose(id){
 	$(id).fadeOut(300);
@@ -626,6 +638,7 @@ $(function(){
   posFixed('.title-main-wrap')
   fixedFooter();
   comma();
+  productMenuCheck();
   countInput('[data-evt*="inp-number"]');
   maxLengthChk('[type=number][maxlength]');
   toggleBtns();
