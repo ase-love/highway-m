@@ -1848,7 +1848,7 @@
         type: "fraction",
       }})
     basicSlide('#goodsSlide', {loop:false,slidesPerView:2.4, min:2})
-    centerSlide('#mainGoodsSlide', {loop:true,slidesPerView:'auto', centeredSlides: true, min:1})
+    centerSlide('#mainGoodsSlide', {loop:true,slidesPerView: 2.1, centeredSlides: true, min:1})
     basicSlide('#mainBannerSlide', {autoplay:{ dealy: 300 }, slidesPerView:1, min:2})
 
     basicSlide('#product1', {slidesPerView:2.4, min:2})
@@ -1891,6 +1891,21 @@
       basicSlide('#'+id, {loop:false, slidesPerView:2.4, min:2})
     });
 
+
+    // 슬라이드버튼 이미지 센터
+    btnCenter();
+    function btnCenter(){
+      if($('.main-event-list').length > 0) $('.main-event-list [class*=swiper-button-]').css('top', $('.main-event-list img').height() / 2);
+      if($('.main-goods-list').length > 0) $('.main-goods-list [class*=swiper-button-]').css('top', $('.main-goods-list .item-photo-box').height() / 2);
+    }
+
+    let resizeTimer;
+    $(window).resize(function(){
+      resizeTimer = setTimeout(function() {
+        btnCenter();
+      }, 250);
+    });
+      
   </script>
 
 
